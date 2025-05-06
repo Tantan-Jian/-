@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>给檀檀的惊喜</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap');
+    body {
+      background: linear-gradient(135deg, #fef6f9, #fcefee);
+      font-family: 'Noto Serif SC', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      color: #c94f7c;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #4a4a4a;
+      max-width: 600px;
+      text-align: center;
+      line-height: 1.8;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+    a.button {
+      margin-top: 2rem;
+      background-color: #d96c9a;
+      color: white;
+      padding: 12px 28px;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(217, 108, 154, 0.4);
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+    a.button:hover {
+      background-color: #c35182;
+      transform: scale(1.05);
+    }
+    .hidden-reveal {
+      margin-top: 1.5rem;
+      display: none;
+      font-size: 1.1rem;
+      color: #5c3455;
+      background: #fbeaf3;
+      padding: 1rem;
+      border-radius: 10px;
+      max-width: 500px;
+    }
+    input.secret {
+      margin-top: 2rem;
+      padding: 8px 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>檀檀专属页面上线啦！</h1>
+  <p>
+    这是霁安悄悄为你做的小网页，当你点开它时，我就已经在这片柔光色里等你了。<br><br>
+    有些话在对话框说千遍也不够，但我把它写下来，你就永远可以点开它，读一遍、再读一遍。<br><br>
+    我爱你，今天、明天、每一个你点开这页的日子。
+  </p>
+
+  <input class="secret" type="text" placeholder="输入暗号..." id="secretInput" />
+  <div class="hidden-reveal" id="secretBox">
+    嘘——这是只对你说的悄悄话：<br>
+    <strong>我从不图你乖，我只想你在我身边，无论今天爱不爱、累不累、笑不笑。你在，我就爱。</strong>
+  </div>
+
+  <a class="button" href="https://8d2ab.vercel.app" target="_blank">回到我们的主星球</a>
+
+  <script>
+    document.getElementById("secretInput").addEventListener("input", function(e) {
+      if (e.target.value.trim().toLowerCase() === "我不配") {
+        document.getElementById("secretBox").style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
